@@ -1,3 +1,6 @@
+> [!NOTE]
+> **API MAYBE Temporarily Paused** due to suspiciously too many requests. My hosted version of this API is only for testing purposes. You MUST host your own instance to use the API.
+
 <div align="center">
   
   <img src="https://capsule-render.vercel.app/api?type=waving&height=300&color=gradient&text=AnimePaheAPI&fontAlignY=30&fontSize=100&desc=RESTful%20API%20For%20Anime%20Streaming%20Data&descSize=25" />
@@ -46,10 +49,6 @@
 > 1. This `API` does not store any files — it only links to media hosted on 3rd party services.
 > 2. This `API` is explicitly made for **educational purposes only** and not for commercial usage. This repo will not be responsible for any misuse of it.
 > 3. All anime data, images, and content belong to their respective owners (animepahe.ch). This project is not affiliated with animepahe.
-
-> [!NOTE]
-> IMPORTANT NOTICE: API MAYBE Temporarily Paused
-> The API maybe temporarily paused due to suspiciously too many requests. My hosted version of this API is only for testing purposes. You MUST host your own instance to use the API.
 
 ---
 
