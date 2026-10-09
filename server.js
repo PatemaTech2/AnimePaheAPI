@@ -282,6 +282,18 @@ app.use((req, res, next) => {
  */
 app.use('/api', addCreatorInfo);
 
+// ══════════════════��═══════════════════════════════════════════
+// ROOT HEALTH CHECK
+// ══════════════════════════════════════════════════════════════
+app.get('/', (req, res) => {
+  return res.status(200).json({
+    success: true,
+    message: 'AnimePaheAPI is running.',
+    docs: 'Use /api/* endpoints for the API.',
+    repository: 'https://github.com/PatemaTech2/AnimePaheAPI',
+  });
+});
+
 // ══════════════════════════════════════════════════════════════
 // API ROUTES
 // ══════════════════════════════════════════════════════════════
@@ -295,7 +307,7 @@ app.use('/api', addCreatorInfo);
  */
 app.use('/api', apiRoutes);
 
-// ══════════════════════════════════════════════════════════════
+// ═══════════════════════════════════��══════════════════════════
 // GLOBAL ERROR HANDLER
 // ══════════════════════════════════════════════════════════════
 
@@ -340,10 +352,12 @@ app.use((req, res) => {
  *   Listens on the configured port (default: 3000). Logs the URL
  *   for easy access during development.
  */
-app.listen(PORT, () => {
-  console.log(`\n  AnimePaheAPI server running at http://localhost:${PORT}\n`);
-});
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\n  AnimePaheAPI server running at http://localhost:${PORT}\n`);
+  });
+}
 
 module.exports = app;
 
-// ══════════════════════════════════════════════════════════════ END: server.js
+// ══════════════════════════════════════════════════════════════ END: [...]
